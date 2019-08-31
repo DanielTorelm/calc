@@ -1,0 +1,41 @@
+<body ng-app="calc">
+
+  <h1>Instructions</h1>
+  <p>Numbers are entered in the two grey boxes, (where it says "0").<br> Then just press button that correspond to the operation you want to do. <br>They result will showned att the bottom after "<i>Sum:</i>".</p>
+
+ <div ng-controller="MainCtrl"> 
+      
+<div>
+    <div class="calc" ng-click="add(num1,num2)" value="add" style="float: left;">
+        <input class="styled" type="text" placeholder="Number 1"  ng-model="num1" ng-init="num1=0">
+    </div>
+ 
+  <div class="calc" ng-click="add(num1,num2)" value="multiply" style="float: left;"><img src="http://www.danieltorelm.se/codepenassets/plus.png" alt="plus"></div>
+  
+  <div class="calc" ng-click="subtract(num1,num2)" style="float: left;"><img src="http://www.danieltorelm.se/codepenassets/minus.png"></div>
+  
+</div>
+<div style="clear:both"></div>
+<div>
+     <div class="calc" ng-click="subtract(num1,num2)" value="subtract" style="float: left;">
+        <input class="styled" type="text" placeholder="Number 2" ng-model="num2" ng-init="num2=0">
+    </div>
+  
+    <div class="calc" ng-click="multiply(num1,num2)" value="div" style="float: left;"><img src="http://www.danieltorelm.se/codepenassets/multiply.png"></div>
+  
+     <div class="calc" ng-click="div(num1,num2)" style="float: left;"><img src="http://www.danieltorelm.se/codepenassets/div.png"></div>
+    
+</div>
+<div style="clear:both"></div>
+
+    
+<div class="output">   
+&nbsp;&nbsp;Sum : {{result}}
+</div>     
+    
+</div>
+
+</body>
+
+
+
